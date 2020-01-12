@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu, Segment, Header, Button } from 'semantic-ui-react'
+import { Menu, Button, Segment, Header, Container} from 'semantic-ui-react'
 
 class NavBar extends Component {
     state = { activeItem: 'About' }
@@ -7,31 +7,33 @@ class NavBar extends Component {
     render() {
         const { activeItem } = this.state
         return (
-            <Menu borderless>
+            <Segment inverted>
                 <Menu.Item header>ESTHER YEJU AHN</Menu.Item>
-                 <Menu.Menu position='right'>
-                    <Menu.Item
-                      name='About'
-                      active={activeItem === 'About'}
-                      onClick={this.handleItemClick}
-                    />
-                    <Menu.Item
-                      name='Portfolio'
-                      active={activeItem === 'Portfolio'}
-                      onClick={this.handleItemClick}
-                    />
-                    <Menu.Item
-                      name='Writing'
-                      active={activeItem === 'Writing'}
-                      onClick={this.handleItemClick}
-                    />
-                    <Menu.Item
-                      name='Contact'
-                      active={activeItem === 'Contact'}
-                      onClick={this.handleItemClick}
-                    />
-                </Menu.Menu>             
-            </Menu> 
+                <Menu inverted pointing secondary>
+                    <Menu.Menu position='right'>
+                        <Menu.Item
+                        name='About'
+                        active={activeItem === 'About'}
+                        onClick={this.handleItemClick}
+                        />
+                        <Menu.Item
+                        name='Portfolio'
+                        active={activeItem === 'Portfolio'}
+                        onClick={this.handleItemClick}
+                        />
+                        <Menu.Item
+                        name='Writing'
+                        active={activeItem === 'Writing'}
+                        onClick={this.handleItemClick}
+                        />
+                        <Menu.Item
+                        name='Contact'
+                        active={activeItem === 'Contact'}
+                        onClick={this.handleItemClick}
+                        />
+                    </Menu.Menu>
+                </Menu>
+            </Segment>
         )
     }
 }
