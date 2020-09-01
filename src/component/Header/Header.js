@@ -1,14 +1,15 @@
 import React, {Component} from "react";
+import {StyledMenu, StyledMenuItem} from "./StyledHeader";
 import { Menu } from 'semantic-ui-react';
+import './Header.css';
 
 class Header extends Component {
     state = { activeItem: 'home' };
     handleItemClick = (e, { name }) => this.setState({ activeItem: name });
-
     render() {
         const { activeItem } = this.state;
         return (
-            <Menu>
+            <StyledMenu>
                 <Menu.Item
                     name='home'
                     active={activeItem === 'home'}
@@ -29,7 +30,7 @@ class Header extends Component {
                     active={activeItem === 'Blog'}
                     onClick={this.handleItemClick}
                 />
-            </Menu>
+            </StyledMenu>
         )
     }
 }
