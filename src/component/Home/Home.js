@@ -29,7 +29,7 @@ const Home = () => (
                 In my free time, I love practicing Yoga, cooking, and listening to old record pop songs! Feel free to reach out to me! I would love to chat!
                 <br/>
                 <br/>
-                I am currently looking for Spring, 2021 Co-Op and Summer 2021 Software Engineering Internship opportunities :)
+                I am currently looking for Spring 2021 Co-Op and Summer 2021 Software Engineering Internship opportunities :)
             </p>
         </Container>
     </div>
