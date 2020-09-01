@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {StyledMenu, StyledMenuItem} from "./StyledHeader";
-import { Menu } from 'semantic-ui-react';
+import {Menu, Icon, Container} from 'semantic-ui-react';
 import './Header.css';
 
 class Header extends Component {
@@ -11,10 +11,10 @@ class Header extends Component {
         return (
             <StyledMenu>
                 <Menu.Item
-                    name='home'
+                    name = "home"
                     active={activeItem === 'home'}
                     onClick={this.handleItemClick}
-                />
+                    />
                 <Menu.Item
                     name='Portfolio'
                     active={activeItem === 'Portfolio'}
