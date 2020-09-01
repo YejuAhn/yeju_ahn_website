@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import {StyledMenu, StyledMenuItem} from "./StyledHeader";
-import {Menu, Icon, Container} from 'semantic-ui-react';
+import {StyledMenu} from "./StyledHeader";
+import {Container, Icon, Image, Menu} from 'semantic-ui-react';
 import './Header.css';
 
 class Header extends Component {
@@ -10,6 +10,7 @@ class Header extends Component {
         const { activeItem } = this.state;
         return (
             <StyledMenu>
+                <Icon name='paw' size='huge'/>
                 <Menu.Item
                     name = "home"
                     active={activeItem === 'home'}

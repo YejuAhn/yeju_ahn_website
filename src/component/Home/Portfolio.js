@@ -13,8 +13,7 @@ const Section = styled.section`
   background: ${props => props.background};
 `
 
-
-class About extends Component {
+class Portfolio extends Component {
     render() {
         return (
             <Section background="cornflowerblue">
@@ -24,4 +23,4 @@ class About extends Component {
     }
 }
 
-export default About;
+export default Portfolio;
