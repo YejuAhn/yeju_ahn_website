@@ -2,7 +2,6 @@ import React from 'react'
 import { Container, Divider, Icon, Image} from 'semantic-ui-react'
 import myImage from "../../asset/myImage.jpg";
 
-
 const Home = () => (
     <div>
         <Container textAlign='center'>

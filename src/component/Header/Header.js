@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import {StyledMenu} from "./StyledHeader";
-import {Container, Icon, Image, Menu} from 'semantic-ui-react';
+import {Container, Icon, Image, Menu, Dropdown} from 'semantic-ui-react';
 import './Header.css';
+import HeaderContact from './HeaderContact';
 
 class Header extends Component {
     state = { activeItem: 'home' };
@@ -9,8 +10,9 @@ class Header extends Component {
     render() {
         const { activeItem } = this.state;
         return (
-            <StyledMenu>
-                <Icon name='paw' size='huge'/>
+            <StyledMenu size = "large">
+                <Icon name='paw' size='huge' style = {{paddingRight: '10px'}}/>
+                <br/>
                 <Menu.Item
                     name = "home"
                     active={activeItem === 'home'}
@@ -31,6 +33,14 @@ class Header extends Component {
                     active={activeItem === 'Blog'}
                     onClick={this.handleItemClick}
                 />
+                <StyledMenu.Menu position='right'>
+                    <Dropdown item text='Language'>
+                        <Dropdown.Menu>
+                            <Dropdown.Item>English</Dropdown.Item>
+                            <Dropdown.Item>Korean</Dropdown.Item>
+                        </Dropdown.Menu>
+                    </Dropdown>
+                </StyledMenu.Menu>
             </StyledMenu>
         )
     }
