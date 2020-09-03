@@ -36,13 +36,13 @@ class Header extends Component {
                         name='Resume'
                         active={activeItem === 'Resume'}
                         onClick={this.handleItemClick}
-                        href="https://drive.google.com/file/d/1sJbbFdiYQMNAPwLloYyEJL0v-bL-cOhE/view?usp=sharing" target="_blank"
+                        href="https://drive.google.com/file/d/1sJbbFdiYQMNAPwLloYyEJL0v-bL-cOhE/view?usp=sharing"
                         />
                     <Menu.Item
                         name='Blog'
                         active={activeItem === 'Blog'}
                         onClick={this.handleItemClick}
-                        as = {Link} to = '/blog'
+                        href="https://medium.com/@yeju12331"
                     />
                     <StyledMenu.Menu position='right'>
                         <Dropdown item text='Language'>
