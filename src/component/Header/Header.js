@@ -1,17 +1,16 @@
-import React, {Component, createRef} from "react";
+import React, {Component} from "react";
 import {StyledMenu} from "./StyledHeader";
-import {Container, Icon, Sticky, Menu, Dropdown} from 'semantic-ui-react';
+import {Icon, Sticky, Menu, Dropdown} from 'semantic-ui-react';
 import './Header.css';
+import { Link } from "react-router-dom";
 
 class Header extends Component {
     state = { activeItem: 'home' };
     handleItemClick = (e, { name }) => this.setState({ activeItem: name });
     render() {
-        const { color } = this.props;
         const { activeItem } = this.state;
         return (
-            <div ref={this.contextRef}>
-                <Sticky context = {this.contextRef}>
+            <Sticky context = {this.contextRef}>
                 <StyledMenu
                     size = "large"
                     style = {{fontSize: '15px',
@@ -25,21 +24,25 @@ class Header extends Component {
                         name = "home"
                         active={activeItem === 'home'}
                         onClick={this.handleItemClick}
-                        />
+                        as = {Link} to = '/'
+                    />
                     <Menu.Item
                         name='Portfolio'
                         active={activeItem === 'Portfolio'}
                         onClick={this.handleItemClick}
+                        as = {Link} to = '/portfolio'
                     />
                     <Menu.Item
                         name='Resume'
                         active={activeItem === 'Resume'}
                         onClick={this.handleItemClick}
-                    />
+                        href="https://drive.google.com/file/d/1sJbbFdiYQMNAPwLloYyEJL0v-bL-cOhE/view?usp=sharing" target="_blank"
+                        />
                     <Menu.Item
                         name='Blog'
                         active={activeItem === 'Blog'}
                         onClick={this.handleItemClick}
+                        as = {Link} to = '/blog'
                     />
                     <StyledMenu.Menu position='right'>
                         <Dropdown item text='Language'>
@@ -50,8 +53,7 @@ class Header extends Component {
                         </Dropdown>
                     </StyledMenu.Menu>
                 </StyledMenu>
-            </Sticky>
-        </div>
+        </Sticky>
         )
     }
 }

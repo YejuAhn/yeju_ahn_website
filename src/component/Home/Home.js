@@ -1,6 +1,7 @@
 import React from 'react'
-import { Container, Divider, Icon, Image} from 'semantic-ui-react'
+import {Container, Divider, Icon, Image, Menu} from 'semantic-ui-react'
 import myImage from "../../asset/myImage.jpg";
+import Contact from "./Contact";
 
 const Home = () => (
     <div>
@@ -31,6 +32,7 @@ const Home = () => (
                 I am currently looking for Spring 2021 Co-Op and Summer 2021 Software Engineering Internship opportunities :)
             </p>
         </Container>
+        <Contact> </Contact>
     </div>
 )
 

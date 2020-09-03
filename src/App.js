@@ -1,22 +1,25 @@
 import React, {Component, createRef} from 'react';
 import './App.css';
 import Portfolio from './component/Home/Portfolio';
-import Contact from './component/Home/Contact';
 import Home from './component/Home/Home';
 import Header from './component/Header/Header';
 import 'semantic-ui-css/semantic.min.css';
-import background from "./asset/background.jpg";
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 
 class App extends Component {
     contextRef = createRef();
     render() {
     return (
-        <div className="container">
-            <Header> </Header>
-            <Home> </Home>
-            <Contact> </Contact>
-        </div>
+        <Router>
+            <div className="container" ref={this.contextRef}>
+                <Header> </Header>
+                <Switch>
+                    <Route exact path='/' component={Home} />
+                    <Route exact path='/portfolio' component={Portfolio} />
+                </Switch>
+            </div>
+        </Router>
         );
     }
 }
