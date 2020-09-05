@@ -3,7 +3,6 @@
     margin-right: 50px;
 }
 
-
 /* Clear floats after the columns */
 .row:after {
     content: "";
@@ -46,6 +45,8 @@
 
     .myName {
         font-size: 60px;
+        position:relative;
+        height: 0px;
     }
 
     .myInfo{
@@ -88,6 +89,8 @@
 
     .myName {
         font-size: 60px;
+        position:relative;
+        height: 0px;
     }
 
     .myInfo{
@@ -140,7 +143,6 @@
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px
 */
-
 @media (min-width: 481px) and (max-width: 767px) {
     .row {
         margin-top : 50px;
@@ -169,11 +171,11 @@
     }
 
     .myName {
-        font-size: 60px;
+        font-size: 40px;
     }
 
     .myInfo{
-        margin-top: 40px;
+        margin-top: 20px;
     }
 }
 
@@ -210,11 +212,11 @@
     }
 
     .myName {
-        font-size: 60px;
+        font-size: 40px;
     }
 
     .myInfo{
-        margin-top: 40px;
+        margin-top: 20px;
     }
 }
 
