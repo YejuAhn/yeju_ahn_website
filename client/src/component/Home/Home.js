@@ -4,6 +4,8 @@ import myImage from "../../asset/myImage.jpg";
 import Contact from "./Contact";
 import LineDemo from './Chart';
 import './Home.css';
+import PortfolioFromBack from "./PortfolioFromBack";
+
 const Home = () => (
     <div>
         <div className = "row">
