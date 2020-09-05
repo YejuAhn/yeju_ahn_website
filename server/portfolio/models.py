@@ -20,3 +20,6 @@ class Tag(models.Model):
 
     class Meta:
         ordering = ['project__order', 'order']
+
+    def __str__(self):
+        return self.tag_title
