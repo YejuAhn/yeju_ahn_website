@@ -1,3 +1,8 @@
+.allAboutMe{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
 .row {
     margin-top : 50px;
 }
@@ -5,13 +10,14 @@
 #colOne {
     float: left;
     width: 60%;
-    padding: 10px;
+    margin-top : 70px;
+    padding : 10px;
 }
 
 #colTwo {
     float: left;
     width: 40%;
-    padding: 10px;
+    padding : 10px;
 }
 
 /* Clear floats after the columns */
@@ -19,4 +25,12 @@
     content: "";
     display: table;
     clear: both;
+}
+
+.myName {
+    font-size: 60px;
+}
+
+.myInfo{
+    margin-top: 40px;
 }

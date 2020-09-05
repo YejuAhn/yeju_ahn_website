@@ -7,16 +7,24 @@ import './Home.css';
 
 const Home = () => (
     <div>
-        <Container>
+        <Container className = 'allAboutMe'>
             <div className = "row">
                 <div id = 'colOne'>
-                    <h1 >Esther Yeju Ahn</h1>
+                    <div className = "myNameInfo">
+                        <h1 className = "myName">Esther Yeju Ahn</h1>
+                        <h2 className = "myInfo">
+                            B.S. in Statistics and Machine Learning
+                            <br/> Minor in Software Engineering
+                            <br/>@ Carnegie Mellon University
+                        </h2>
+                    </div>
+                    <Contact></Contact>
                 </div>
                 <div id = 'colTwo'>
                     <Image src = {myImage} circular/>
                 </div>
             </div>
-            <div>
+            <div className = 'aboutMe'>
                 <Icon name='home' />
                 <b>About Me</b>
                 <br/>
@@ -33,7 +41,6 @@ const Home = () => (
             </div>
             <LineDemo>
             </LineDemo>
-            <Contact> </Contact>
         </Container>
     </div>
 )
