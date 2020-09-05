@@ -7,21 +7,21 @@ import './Home.css';
 
 const Home = () => (
     <div>
-        <Container className = 'allAboutMe'>
+        <Container className = 'yejuAhnWeb'>
             <div className = "row">
                 <div id = 'colOne'>
-                    <div className = "myNameInfo">
-                        <h1 className = "myName">Esther Yeju Ahn</h1>
-                        <h2 className = "myInfo">
-                            B.S. in Statistics and Machine Learning
-                            <br/> Minor in Software Engineering
-                            <br/>@ Carnegie Mellon University
-                        </h2>
-                    </div>
-                    <Contact></Contact>
+                    <h1 className = "myName">Esther Yeju Ahn</h1>
                 </div>
                 <div id = 'colTwo'>
-                    <Image src = {myImage} circular/>
+                    <h2 className = "myInfo">
+                        B.S. in Statistics and Machine Learning
+                        <br/> Minor in Software Engineering
+                        <br/>@ Carnegie Mellon University
+                    </h2>
+                    <Contact></Contact>
+                </div>
+                <div id = 'colThree'>
+                    <Image className= 'myImage' src = {myImage} circular/>
                 </div>
             </div>
             <div className = 'aboutMe'>
