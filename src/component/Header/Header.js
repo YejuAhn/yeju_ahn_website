@@ -12,14 +12,17 @@ class Header extends Component {
         return (
             <Sticky context = {this.contextRef}>
                 <StyledMenu
-                    size = "large"
-                    style = {{fontSize: '15px',
-                    backgroundColor: '#dcd0ff'}}
+                    size = "massive"
+                    style = {{
+                    backgroundColor: '#FFFFFF'}}
                     attached='top'
                     color = {'purple'}
-                    tabular>
-                    <Icon name='paw' size='large' style = {{paddingRight: '20px', paddingTop: '10px'}}/>
-                    <br/>
+                    pointing secondary>
+                    <Menu.Item>
+                        <Icon name='paw'
+                          size='large'
+                          style = {{paddingLeft: '10px'}}/>
+                    </Menu.Item>
                     <Menu.Item
                         name = "home"
                         active={activeItem === 'home'}
@@ -43,6 +46,12 @@ class Header extends Component {
                         active={activeItem === 'Blog'}
                         onClick={this.handleItemClick}
                         href="https://medium.com/@yeju12331"
+                    />
+                    <Menu.Item
+                        name = "Contact"
+                        active={activeItem === 'Contact'}
+                        onClick={this.handleItemClick}
+                        as = {Link} to = '/'
                     />
                     <StyledMenu.Menu position='right'>
                         <Dropdown item text='Language'>

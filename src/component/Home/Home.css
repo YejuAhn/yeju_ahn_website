@@ -1,0 +1,22 @@
+.row {
+    margin-top : 50px;
+}
+
+#colOne {
+    float: left;
+    width: 60%;
+    padding: 10px;
+}
+
+#colTwo {
+    float: left;
+    width: 40%;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
