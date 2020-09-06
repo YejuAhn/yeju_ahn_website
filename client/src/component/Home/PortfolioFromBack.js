@@ -41,8 +41,8 @@ class PortfolioFromBack extends Component {
                                         <Image src = {item.image} size='large' rounded/>
                                         <Modal.Description>
                                             <p>
-                                                This is an example of expanded content that will cause the modal's
-                                                dimmer to scroll.
+                                            This is an example of expanded content that will cause the modal's
+                                            dimmer to scroll.
                                             </p>
                                         </Modal.Description>
                                     </Modal.Content>
