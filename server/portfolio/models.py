@@ -4,6 +4,7 @@ class Project(models.Model):
     project_title = models.CharField(max_length = 200, default = "")
     description = models.TextField()
     lesson_learned = models.TextField()
+    link = models.URLField(default = None, null = True, blank = True)
     image = models.ImageField(upload_to = 'project_image', blank = True, null = True)
     order = models.PositiveIntegerField(default = 0)
 

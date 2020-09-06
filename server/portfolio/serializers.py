@@ -7,6 +7,8 @@ class ProjectSerializer(serializers.ModelSerializer):
         fields = (
             'id',
             'project_title',
+            'description',
+            'link',
             'lesson_learned',
             'image',
             'tag'

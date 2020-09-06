@@ -18,9 +18,8 @@ class App extends Component {
                 <Container className = 'yejuAhnWeb'>
                     <Switch>
                             <Route exact path='/' component={Home} />
-                            <Route exact path='/portfolio' component={Portfolio} />
+                            <Route exact path='/portfolio' component={PortfolioFromBack} />
                     </Switch>
-                    <h1>Hi</h1>
                 </Container>
             </div>
         </Router>
