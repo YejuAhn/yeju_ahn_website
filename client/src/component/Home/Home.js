@@ -1,10 +1,9 @@
 import React from 'react'
-import {Container, Divider, Icon, Image} from 'semantic-ui-react'
+import {Divider, Icon, Image} from 'semantic-ui-react'
 import myImage from "../../asset/myImage.jpg";
 import Contact from "./Contact";
 import LineDemo from './Chart';
 import './Home.css';
-import PortfolioFromBack from "./PortfolioFromBack";
 
 const Home = () => (
     <div>
