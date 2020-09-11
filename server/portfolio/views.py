@@ -1,14 +1,19 @@
-from django.shortcuts import render
+from django.views import generic
 from .models import Project
-from .serializers import ProjectSerializer
-from rest_framework import generics
+from django.http import HttpResponse
 
-class ListProject(generics.ListCreateAPIView):
-    queryset = Project.objects.all()
-    serializer_class = ProjectSerializer
+class IndexView(generic.TemplateView):
+    template_name = 'portfolio/index.html'
 
+    def get_context_data(self, **kwargs):
+        context = super(IndexView, self).get_context_data(**kwargs)
+        projects = Project.objects.all()
+        context['projects'] = projects
+        return context
 
-class DetailProject(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Project.objects.all()
-    serializer_class = ProjectSerializer
+class DetailView(generic.DetailView):
+    model = Project
+    template_name = 'portfolio/project_detail.html'
 
+    def get_context_data(self, **kwargs):
+        context = super(DetailView, self).get_context_data(**kwargs)
