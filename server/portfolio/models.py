@@ -8,6 +8,7 @@ class Project(models.Model):
     lesson_learned = models.TextField()
     link = models.URLField(default = None, null = True, blank = True)
     image = models.ImageField(upload_to = 'project_image', blank = True, null = True)
+    detail_image = models.ImageField(upload_to = 'project_image', blank = True, null = True)
     order = models.PositiveIntegerField(default = 0)
 
     class Meta:

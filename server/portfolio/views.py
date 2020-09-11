@@ -1,6 +1,5 @@
 from django.views import generic
 from .models import Project
-from django.http import HttpResponse
 
 class IndexView(generic.TemplateView):
     template_name = 'portfolio/index.html'
@@ -17,3 +16,6 @@ class DetailView(generic.DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(DetailView, self).get_context_data(**kwargs)
+        project = Project.objects.get(id = self.object.id)
+        context['project'] = project
+        return context
