@@ -1,3 +1,6 @@
+## Check it out on:
+http://3.35.137.74/
+
 ## Quickstart
 pip install -r requirements.txt
 
