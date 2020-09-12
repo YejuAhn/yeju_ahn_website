@@ -1,5 +1,5 @@
 ## Check it out on:
-http://ec2-13-125-183-155.ap-northeast-2.compute.amazonaws.com/
+www.yejuahnnet.net
 This project was deployed using AWS EC2 Ubuntu server.
 
 ## Quickstart
