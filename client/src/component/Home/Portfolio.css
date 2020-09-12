@@ -1,0 +1,13 @@
+.projectList{
+    margin-top: 50px;
+}
+
+.projectList .projectItem .projectTitle{
+    background-color: thistle;
+    font-size: 15px;
+    color: black;
+}
+
+.pagination{
+    margin-top: 1000px;
+}

@@ -1,13 +1,15 @@
 # Logs
-logs
-*.Logs
+client/logs
+client/*.Logs
 
 # Compiled directory and file
 build/
-bundle.js
+/client/bundle.js
 
 # Dependency directories
-node_modules/
+/client/node_modules
 
 #intellij
 .idea
+
+*.pyc

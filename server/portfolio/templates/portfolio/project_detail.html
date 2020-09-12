@@ -1,0 +1,22 @@
+{% extends 'portfolio/index.html' %}
+
+{% block content %}
+<!-- Main -->
+{% if project.link %}
+    <a href="{{ project.link }}">
+        <h1>{{project.project_title}}</h1>
+    </a>
+    {% else %}
+    <h1>{{project.project_title}}</h1>
+{% endif %}
+
+<span class="image main">
+    {% if project.detail_image %}
+        <img src="{{ project.detail_image.url }}" alt=""/>
+    {% else %}
+        <img src="{{ project.image.url }}" alt=""/>
+    {% endif %}
+</span>
+<p>{{ project.description }}</p>
+<p>{{ project.lesson_learned }}</p>
+{% endblock %}
