@@ -3,7 +3,15 @@
     <div class="inner">
         <section>
             <h2>Contact Me!</h2>
-            <form method="post" action="#">
+            <form action = "{% url 'create-post' %}" method="post">
+                {% if form_error %}
+                    <div class="error-message">
+                        <div class="alert alert-danger">
+                            <h4>Please Fill out all forms correctly</h4>
+                        </div>
+                    </div>
+                {% endif %}
+                {% csrf_token %}
                 <div class="fields">
                     <div class="field half">
                         <input type="text" name="name" id="name" placeholder="Name" />
@@ -16,7 +24,7 @@
                     </div>
                 </div>
                 <ul class="actions">
-                    <li><input type="submit" value="Send" class="primary" /></li>
+                    <li><input type="submit" value="Submit" class="primary" /></li>
                 </ul>
             </form>
         </section>

@@ -86,7 +86,6 @@
 
                 // Get the <span> element that closes the modal
                 var spans = document.getElementsByClassName("close");
-                console.log(btn);
                 // When the user clicks the button, open the modal
                 for (var i = 0; i < btn.length; i++) {
                  btn[i].onclick = function(e) {
@@ -94,7 +93,6 @@
                     console.log(btn[i]);
                     modal = document.querySelector(e.target.getAttribute("href"));
                     modal.style.display = "block";
-                    console.log(modal);
                  }
                 }
 

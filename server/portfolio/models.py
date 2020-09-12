@@ -30,3 +30,12 @@ class Tag(models.Model):
 
     def __str__(self):
         return self.tag_title
+
+class Contact(models.Model):
+    name = models.CharField(max_length=30, default="")
+    email = models.EmailField(max_length=254, default="")
+    message = models.TextField(max_length=2000, default=None, blank = True, null = True)
+    date = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
