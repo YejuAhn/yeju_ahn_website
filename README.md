@@ -1,5 +1,6 @@
 ## Check it out on:
 http://3.35.137.74/
+This project was deployed using AWS EC2 Ubuntu server.
 
 ## Quickstart
 pip install -r requirements.txt
