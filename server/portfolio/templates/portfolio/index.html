@@ -37,6 +37,7 @@
                 <li><a href="{% url 'portfolio-index' %}">Home</a></li>
                 <li><a href="{% url 'about-me' %}">About</a></li>
                 <li><a href="https://drive.google.com/file/d/1sJbbFdiYQMNAPwLloYyEJL0v-bL-cOhE/view?usp=sharing">Resume</a></li>
+                <li><a href="https://medium.com/@yeju12331">Blog</a></li>
             </ul>
         </nav>
         <!-- Main -->
@@ -51,8 +52,8 @@
                             <br/>Check out my projects below !
                         </p>
                     </header>
-                    {% for project in projects %}
                     <section class="tiles">
+                    {% for project in projects %}
                         <article class="{% cycle "style1" "style2" "style3" "style4 style5 style6" %}" >
                             <span class="image">
                                 <img src="{{ project.image.url }}" alt="" />
@@ -64,8 +65,8 @@
                                 </div>
                             </a>
                         </article>
-                    </section>
                     {% endfor %}
+                    </section>
                 {% endblock %}
                 </div>
 			</div>
@@ -76,5 +77,44 @@
 			<script src="../../static/portfolilo/js/breakpoints.min.js"></script>
 			<script src="../../static/portfolilo/js/util.js"></script>
 			<script src="../../static/portfolilo/js/main.js"></script>
+            <script>
+                // Get the button that opens the modal
+                var btn = document.querySelectorAll("a.modal-button");
+
+                // All page modals
+                var modals = document.querySelectorAll('.modal');
+
+                // Get the <span> element that closes the modal
+                var spans = document.getElementsByClassName("close");
+                console.log(btn);
+                // When the user clicks the button, open the modal
+                for (var i = 0; i < btn.length; i++) {
+                 btn[i].onclick = function(e) {
+                    e.preventDefault();
+                    console.log(btn[i]);
+                    modal = document.querySelector(e.target.getAttribute("href"));
+                    modal.style.display = "block";
+                    console.log(modal);
+                 }
+                }
+
+                // When the user clicks on <span> (x), close the modal
+                for (var i = 0; i < spans.length; i++) {
+                 spans[i].onclick = function() {
+                    for (var index in modals) {
+                      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";
+                    }
+                 }
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                    if (event.target.classList.contains('modal')) {
+                     for (var index in modals) {
+                      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";
+                     }
+                    }
+                }
+            </script>
 	</body>
 </html>
