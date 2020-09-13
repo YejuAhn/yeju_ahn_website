@@ -17,6 +17,6 @@
         <img src="{{ project.image.url }}" alt=""/>
     {% endif %}
 </span>
-<p>{{ project.description }}</p>
-<p>{{ project.lesson_learned }}</p>
+<p style="color: #0f0f0f">{{ project.description | safe}}</p>
+<p style="color: #0f0f0f">{{ project.lesson_learned | safe}}</p>
 {% endblock %}
