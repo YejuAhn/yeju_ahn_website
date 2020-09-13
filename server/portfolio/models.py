@@ -4,6 +4,7 @@ from django.urls import reverse
 class Project(models.Model):
     project_title = models.CharField(max_length = 200, default = "")
     short_description = models.CharField(max_length=50, default = "")
+    date = models.CharField(max_length=20, default="")
     description = models.TextField()
     lesson_learned = models.TextField()
     link = models.URLField(default = None, null = True, blank = True)
