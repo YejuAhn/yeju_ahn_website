@@ -1,5 +1,5 @@
 ## Check it out on:
-[yejuahn.net](http://54.241.33.123/)
+[yejuahn.net](http://yejuahn.net/)
 This project was deployed using AWS EC2 Ubuntu server.
 
 ## Quickstart
