@@ -10,6 +10,7 @@ class Project(models.Model):
     link = models.URLField(default = None, null = True, blank = True)
     image = models.ImageField(upload_to = 'project_image', blank = True, null = True)
     detail_image = models.ImageField(upload_to = 'project_image', blank = True, null = True)
+    second_detail_image = models.ImageField(upload_to = 'project_image_two', blank = True, null = True)
     order = models.PositiveIntegerField(default = 0)
 
     class Meta:

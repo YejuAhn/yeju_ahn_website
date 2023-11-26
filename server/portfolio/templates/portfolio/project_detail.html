@@ -26,6 +26,8 @@
 <span class="image main">
     {% if project.detail_image %}
         <img src="{{ project.detail_image.url }}" alt=""/>
+    {% elif project.second_detail_image %}
+        <img src="{{ project.second_detail_image.url }}" alt=""/>
     {% else %}
         <img src="{{ project.image.url }}" alt=""/>
     {% endif %}
